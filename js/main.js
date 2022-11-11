@@ -13,3 +13,16 @@ da parte nostra
 
 */
 
+const app = new Vue ({
+    el: '#root',
+    data: {
+        titolo: 'Amsterdam',
+        title: 'text-center',
+        obj: [
+            { img: 'https://unsplash.com/photos/QRtym77B6xk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8YW1zdGVyZGFtfGVufDB8fHx8MTY2ODE4MDMwNA&force=true&w=640', id: 1 },
+            { img: 'https://unsplash.com/photos/2Hs8zbwOLDA/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8M3x8YW1zdGVyZGFtfGVufDB8fHx8MTY2ODE4MDMwNA&force=true&w=640', id: 2 },
+            { img: 'https://unsplash.com/photos/t2hgHV1R7_g/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8YW1zdGVyZGFtfGVufDB8fHx8MTY2ODE4MDMwNA&force=true&w=640', id:  3},
+            { img: 'https://unsplash.com/photos/-e4vLFZV9QM/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8YW1zdGVyZGFtfGVufDB8fHx8MTY2ODE4MDMwNA&force=true&w=640', id: 4 }
+        ]
+    }
+})
