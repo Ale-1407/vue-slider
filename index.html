@@ -13,8 +13,12 @@
     <div id="root">
         
         <h1 class="text-danger py-3" :class="title">{{ titolo }}</h1>
-        <div class="d-flex justify-content-center">
-            <img :src="obj[0].img" alt="img">
+        <div class="d-flex justify-content-center align-items-center">
+            <button @click="cambioSinistra" class="shadow m-3 rounded-5 border-0"><i class="fa-solid fa-chevron-left"></i></button>
+            
+            <img :src="obj[indice].img" alt="img">
+            
+            <button @click="cambioDestra" class="shadow m-3 rounded-5 border-0"><i class="fa-solid fa-chevron-right" @click="cambioDestra"></i></button>
         </div>
         
         
