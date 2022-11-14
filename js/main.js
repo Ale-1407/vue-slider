@@ -49,10 +49,12 @@ var app = new Vue ({
             } else {
                 this.indice--;
             }
-        },
-        
+        }, 
         attivaIntervallo(){
             setInterval (() => { this.cambioDestra() }, 3000);
+        },
+        selezionaImmagine(index){
+           this.indice = index 
         }
     }
 })
