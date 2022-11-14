@@ -18,29 +18,41 @@ var app = new Vue ({
     data: {
         titolo: 'Amsterdam',
         title: 'text-center',
-        obj: [
-            { img: '/img/img-1.jpg', id: 1 },
-            { img: '/img/img-2.jpg', id: 2 },
-            { img: '/img/img-3.jpg', id: 3 },
-            { img: '/img/img-4.jpg', id: 4 }
-        ],
         indice: 0,
+        obj: [
+            { url: '/img/img-1.jpg', id: 1 },
+            { url: '/img/img-2.jpg', id: 2 },
+            { url: '/img/img-3.jpg', id: 3 },
+            { url: '/img/img-4.jpg', id: 4 }
+        ]
     },
+
+    mounted() {
+        // entra quando l'applicativo vue ha caricato el: '#root'
+        this.attivaIntervallo();
+    },
+
     methods: {
-        cambioDestra: function(){
-            if( this.indice > this.obj.lenght){
-             this.indice = 0;
+        cambioDestra(){
+            // cambio immagine in avanti
+            // controllo che l'indice sia minore della lunghezza
+            if( this.indice < this.obj.length -1){
+             this.indice++;
            } else {
-            this.indice++;
+            this.indice = 0; 
            }
         },
-        cambioSinistra: function(){
-            if( this.indice < this.obj.lenght){
-                this.indice = 0;
-              } else {
+        cambioSinistra(){
+            // cambio immagine indietro
+            if( this.indice <= 0 ){
+                this.indice = this.obj.length -1;
+            } else {
                 this.indice--;
-               }
+            }
+        },
+        
+        attivaIntervallo(){
+            setInterval (() => { this.cambioDestra() }, 3000);
         }
-
     }
 })
