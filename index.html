@@ -21,7 +21,7 @@
             <button @click="cambioDestra" class="shadow m-3 rounded-5 border-0"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
         <div class="d-flex justify-content-center">
-            <i class="fa-solid fa-circle m-2" v-for="(elem, index) in obj" @click="selezionaImmagine(index)"></i>
+            <i class="fa-solid fa-circle m-2" :class="(index == indice) ? 'text-danger' : ''" v-for="(elem, index) in obj" @click="selezionaImmagine(index)"></i>
         </div>
     </div>
 
